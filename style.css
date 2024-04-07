@@ -1,0 +1,95 @@
+/*
+Esto va a estilizar el boton ya sea 
+cuando el cursor este arriba (que se haga pointer)
+o el ancho, alto, etc.
+Vos de aca podes cambiar lo que quiera 
+
+btn = boton
+
+*/
+#conteiner {
+    background-color: #d1d1d1; 
+    /* Este es el color de fondo de la 
+    caja o del Conteiner*/  
+    position: relative;
+    /*Esto va a hacer que la posicion de el 
+    boton sea relativa
+    */
+    width: 80px;
+    /*
+    Tamaño del boton
+    */
+    height: 40px;
+     /*
+    Alto del btn
+    */
+    margin: 0px auto;
+     /*
+    Los margenes del btn
+    */    
+    margin-top: 20%;
+     /*
+    Que tan separado va a estar de arriba de la pagina
+    */
+    margin-right: 47%;
+    /*
+    Que tantos px va a estar separado de el margen derecho, en este caso, lo quise centrar
+    */
+    border-radius: 25px;
+    /*
+    Lo tan redondeado que va a estar el contenedor que este el boton
+    */
+    cursor: pointer;
+    /*
+    Hace que al pasar el mouse o cursor por arriba se ponga el dedito para seleccionar
+    */
+    border-color: rgb(0, 0, 0);
+    /*
+    El color del borde del boton
+    */
+}
+
+/*
+        Este es el area del 
+        boton y el boton mismo
+*/
+
+.toggle {
+    position: absolute;
+    /*
+    Esto va a hacer que NUNCA se cambie la 
+    posicion del boton, y que esta sea absoluta
+    */
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    transform: scale(.7);
+    background-color:rgb(0, 0, 0);
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px rgb(65, 64, 64),
+        -3px -3px 8px rgb(65, 64, 64);
+    transition: 1s;
+ 
+}
+
+
+
+#conteiner.active .toggle {
+    left: 40px;
+    background-color: #fff;
+    transition: 1s;
+}
+
+
+body{
+    transition: 1s;
+}
+
+
+body.active {
+    right: -40px;
+    background-color: rgb(23, 23, 23);
+    transition: 1s;
+}
+
